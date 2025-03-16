@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
@@ -9,7 +10,6 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
-
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #dceafc; -fx-background-radius: 5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.ControlSistemaNumerico">
    <children>
@@ -23,7 +23,7 @@
             <Font name="Bodoni MT Black" size="21.0" />
          </font>
       </Label>
-      <GridPane layoutX="40.0" layoutY="52.0" prefHeight="155.0" prefWidth="229.0">
+      <GridPane layoutX="14.0" layoutY="52.0" prefHeight="155.0" prefWidth="229.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
@@ -32,24 +32,19 @@
           <RowConstraints maxHeight="69.4" minHeight="10.0" prefHeight="35.00000610351563" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <ComboBox fx:id="cboSistemaNumericoActual" maxWidth="1.7976931348623157E308" onAction="#seleccionarSistemaNumericoActual" prefWidth="150.0" promptText="Sistema numérico actual" style="-fx-background-color: #a1b3e2;" GridPane.rowIndex="1">
+            <ComboBox fx:id="cboSistemaNumericoActual" maxWidth="1.7976931348623157E308" prefWidth="150.0" promptText="Sistema numérico actual" style="-fx-background-color: #a1b3e2;" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                </GridPane.margin>
             </ComboBox>
-            <TextArea fx:id="txtNumeroConvertir" onKeyPressed="#convertirNumero" prefHeight="200.0" prefWidth="200.0" promptText="Ingrese el número a convertir" wrapText="true">
+            <TextArea fx:id="txtNumeroConvertir" prefHeight="200.0" prefWidth="200.0" promptText="Ingrese el número a convertir" wrapText="true">
                <font>
-                  <Font name="Berlin Sans FB" size="15.0" />
+                  <Font name="Bodoni MT" size="15.0" />
                </font>
             </TextArea>
          </children>
       </GridPane>
-      <Label layoutX="287.0" layoutY="106.0" text="=" textFill="#005187">
-         <font>
-            <Font name="Bodoni MT Black" size="40.0" />
-         </font>
-      </Label>
-      <GridPane layoutX="330.0" layoutY="52.0" prefHeight="155.0" prefWidth="229.0">
+      <GridPane layoutX="357.0" layoutY="52.0" prefHeight="155.0" prefWidth="229.0">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
          </columnConstraints>
@@ -58,14 +53,14 @@
             <RowConstraints maxHeight="69.4" minHeight="10.0" prefHeight="35.00000610351563" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <ComboBox fx:id="cboSistemaNumericoConvertir" maxWidth="1.7976931348623157E308" onAction="#seleccionarSistemaNumericoConvertir" prefWidth="150.0" promptText="Sistema numérico a convertir" style="-fx-background-color: #a1b3e2;" GridPane.rowIndex="1">
+            <ComboBox fx:id="cboSistemaNumericoConvertir" maxWidth="1.7976931348623157E308" prefWidth="150.0" promptText="Sistema numérico a convertir" style="-fx-background-color: #a1b3e2;" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                </GridPane.margin>
             </ComboBox>
             <TextArea fx:id="txtNumeroConvertido" editable="false" prefHeight="200.0" prefWidth="200.0" promptText="Conversión" wrapText="true">
                <font>
-                  <Font name="Berlin Sans FB" size="15.0" />
+                  <Font name="Bodoni MT" size="15.0" />
                </font>
             </TextArea>
          </children>
@@ -90,27 +85,19 @@
                   <Font name="Berlin Sans FB" size="15.0" />
                </font>
             </TextArea>
-            <TextArea fx:id="txtNumero2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onKeyPressed="#ingresarNumero2" prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="2">
+            <TextArea fx:id="txtNumero2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" promptText="Número 2" wrapText="true" GridPane.columnIndex="2">
                <GridPane.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </GridPane.margin>
                <font>
-                  <Font name="Berlin Sans FB" size="15.0" />
+                  <Font name="Bodoni MT" size="15.0" />
                </font>
             </TextArea>
-            <ComboBox fx:id="cboSeleccionOperacion" maxWidth="1.7976931348623157E308" onAction="#seleccionarOperacion" prefWidth="150.0" promptText="Operación" style="-fx-background-color: #a1b3e2;" GridPane.columnIndex="1">
+            <ComboBox fx:id="cboSeleccionOperacion" maxWidth="1.7976931348623157E308" prefWidth="150.0" promptText="Operación" style="-fx-background-color: #a1b3e2;" GridPane.columnIndex="1">
                <GridPane.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </GridPane.margin>
             </ComboBox>
-            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="106.0" prefWidth="42.0" text="=" textFill="#005187" GridPane.columnIndex="3">
-               <font>
-                  <Font name="Bodoni MT Black" size="40.0" />
-               </font>
-               <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </GridPane.margin>
-            </Label>
             <TextArea editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" wrapText="true">
                <font>
                   <Font name="Berlin Sans FB" size="15.0" />
@@ -119,24 +106,56 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </GridPane.margin>
             </TextArea>
-            <TextArea fx:id="txtNumero1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onKeyPressed="#ingresarNumero1" prefHeight="200.0" prefWidth="200.0" wrapText="true">
+            <TextArea fx:id="txtNumero1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" promptText="Número 1" wrapText="true">
                <font>
-                  <Font name="Berlin Sans FB" size="15.0" />
+                  <Font name="Bodoni MT" size="15.0" />
                </font>
                <GridPane.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </GridPane.margin>
             </TextArea>
-            <TextArea fx:id="txtResultado" editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="4">
+            <TextArea fx:id="txtResultado" editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" promptText="Resultado" wrapText="true" GridPane.columnIndex="4">
                <font>
-                  <Font name="Berlin Sans FB" size="15.0" />
+                  <Font name="Bodoni MT" size="15.0" />
                </font>
                <GridPane.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </GridPane.margin>
             </TextArea>
+            <Button fx:id="cmdIgual" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#hacerOperacion" style="-fx-background-color: #a1b3e2;" text="=" GridPane.columnIndex="3">
+               <font>
+                  <Font name="Bodoni MT" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+            </Button>
          </children>
       </GridPane>
-      <ComboBox fx:id="cboSeleccionSistemaNumerico" layoutX="32.0" layoutY="367.0" maxWidth="1.7976931348623157E308" onAction="#seleccionarSistemaNumerico" prefHeight="25.0" prefWidth="535.0" promptText="Sistema numérico" style="-fx-background-color: #a1b3e2;" />
+      <ComboBox fx:id="cboSeleccionSistemaNumerico" layoutX="32.0" layoutY="367.0" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="535.0" promptText="Sistema numérico" style="-fx-background-color: #a1b3e2;" />
+      <GridPane layoutX="259.0" layoutY="74.0" prefHeight="111.0" prefWidth="83.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="=" textFill="#005187">
+               <font>
+                  <Font name="Bodoni MT Black" size="40.0" />
+               </font>
+            </Label>
+            <Button fx:id="cmdConvertir" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#convertirNumero" style="-fx-background-color: #a1b3e2;" text="Convertir" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Bodoni MT" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
    </children>
 </Pane>

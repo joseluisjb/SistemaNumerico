@@ -16,11 +16,7 @@ public class SistemaNumerico {
     //Revisar que no sean negativos
     char[] hexadecimales = {'A', 'B', 'C', 'D', 'E', 'F'};
 
-    public String convertirDecimal(long numero) {
-        return decimalABinario(numero);
-    }
-
-    private String decimalABinario(long numero) {
+    public String decimalABinario(long numero) {
         String resultado = "";
         while (numero > 0) {
             resultado = numero % 2 + resultado;
